@@ -29,13 +29,13 @@
 
   <button onclick="start()" type="button" id="ogi" class="btn btn-dark btn-lg">Start</button>
   <button onclick="stop()" type="button" class="btn btn-dark btn-lg">Stop</button>
-  <canvas id="mikami"width="800"height="600"style="background-color: red;"></canvas>
+  <canvas id="mikami"width="800"height="600"style="background-color: rgb(255, 0, 0);"></canvas>
   <script language="javascript" type="text/javascript">
   var s_time = null;
 
   function start() {
     s_time = new Date();
-    setTimeout("syori()", 10000);
+    setTimeout("syori()", 27000);
     document.getElementById("ogi").disabled = true;
   }
   
@@ -45,7 +45,7 @@
 
      canvas.height = 600;
 
-     canvas.style.backgroundColor = "rgb(255,254,32)";
+     canvas.style.backgroundColor = "rgb(0,255,255)";
    }
 
   function stop() {
@@ -53,7 +53,7 @@
     if(s_time == null) {
       console.log("開始 -> 終了の順に押してください");
     } else {
-      var diff = e_time.getTime() - s_time.getTime();
+      var diff = e_time.getTime() - s_time.getTime() - 27000;
       document.write("経過時間:", diff);
     }
   }
